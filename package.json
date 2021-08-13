@@ -2,14 +2,14 @@
   "name": "shout_electron",
   "version": "1.0.0",
   "description": "Texting and chat tools for your business",
-  "main": "main.js",
+  "main": "build/main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "cp ./main.js ./build/main.js && electron .",
     "electron-pack": "cp ./main.js ./build/main.js && electron-builder -m",
     "react-start": "BROWSER=none react-scripts start",
     "pack": "electron-builder --dir",
     "postinstall": "install-app-deps",
-    "release": "electron-builder -mw --publish always"
+    "release": "cp ./main.js ./build/main.js && electron-builder -mw --publish always"
   },
   "repository": "https://github.com/Verdad/shout_electron",
   "keywords": [

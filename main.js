@@ -37,7 +37,7 @@ function createWindow() {
   //      slashes: true,
   //    })
   //)
-  mainWindow.loadURL("https://www.shout.app/desktop_start");
+  mainWindow.loadURL("https://www.shout.app/start_desktop_app");
   mainWindow.on('closed', () => {
     mainWindow = null
   })
