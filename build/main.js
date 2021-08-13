@@ -37,7 +37,7 @@ function createWindow() {
   //      slashes: true,
   //    })
   //)
-  mainWindow.loadURL("https://www.shout.app/desktop_start");
+  mainWindow.loadURL("https://www.shout.app");
   mainWindow.on('closed', () => {
     mainWindow = null
   })
@@ -76,26 +76,25 @@ const mainMenuTemplate = [
       {
         label: "Inbox",
         click: () => {
-          //console.log("menuItem: ", menuItem, "mainWindow: ", mainWindow, "event: ", event);
-          mainWindow.loadURL("https://www.shout.app/inbox")
+          mainWindow.loadURL("/inbox")
         }
       },
       {
         label: "Orders",
         click: () => {
-          mainWindow.loadURL("https://www.shout.app/orders")
+          mainWindow.loadURL("/orders")
         }
       },
       {
         label: "Shipping",
         click: () => {
-          mainWindow.loadURL("https://www.shout.app/shipping")
+          mainWindow.loadURL("/shipping")
         }
       },
       {
         label: "Contacts",
         click: () => {
-          mainWindow.loadURL("https://www.shout.app/profiles")
+          mainWindow.loadURL("/profiles")
         }
       },
       {
@@ -114,15 +113,15 @@ const mainMenuTemplate = [
     submenu: [
       {
         label: "My Profile",
-        click: () => mainWindow.loadURL("https://www.shout.app/profile/edit")
+        click: () => mainWindow.loadURL("/profile/edit")
       },
       {
         label: "Usage",
-        click: () => mainWindow.loadURL("https://www.shout.app/profile/usage")
+        click: () => mainWindow.loadURL("/profile/usage")
       },
       {
         label: "Privacy",
-        click: () => mainWindow.loadURL("https://www.shout.app/profile/privacy_settings")
+        click: () => mainWindow.loadURL("/profile/privacy_settings")
       }
     ]
   },
@@ -140,3 +139,15 @@ const macMenu = isMac ? mainMenuTemplate.push({
     label: "Help",
     role: "help"
   }) : null;
+
+const devMenu = process.env.NODE_ENV !== "production" 
+  ? mainMenuTemplate.push({
+      label: "DevTools",
+      submenu: [
+        {
+          label: "Toggle Developer Tools",
+          role: "toggleDevTools"
+        }
+      ]
+    })
+  : null;
