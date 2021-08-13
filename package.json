@@ -1,20 +1,21 @@
 {
-  "name": "electron-quick-start",
+  "name": "Shout Desktop",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Texting and chat tools for your business",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/Verdad/shout_electron",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Shout",
+    "Shout App",
+    "About Shout",
+    "Texting",
+    "Chat"
   ],
-  "author": "GitHub",
+  "author": "Micro Enterprise Technologies",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^13.1.9",
