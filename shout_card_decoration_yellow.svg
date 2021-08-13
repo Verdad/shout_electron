@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="265px" height="257px" viewBox="0 0 265 257" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.200000003">
+        <g id="Sharelink-Copy-2" transform="translate(-32.000000, -588.000000)">
+            <g id="Group-9" transform="translate(-196.565234, 468.107355)">
+                <g id="Group-42-Copy-7" transform="translate(241.421088, 131.892645)">
+                    <g id="Group-4">
+                        <rect id="Rectangle" stroke="#F2CF79" stroke-width="24" x="0" y="67.2" width="240" height="96" rx="48"></rect>
+                        <path d="M192,72 C192,32.235498 159.764502,0 120,0 C80.235498,0 48,32.235498 48,72" id="Path" stroke="#F2CF79" stroke-width="24"></path>
+                        <circle id="Oval" fill="#F2CF79" cx="72" cy="115.2" r="14.4"></circle>
+                        <circle id="Oval-Copy-2" fill="#F2CF79" cx="120" cy="115.2" r="14.4"></circle>
+                        <circle id="Oval-Copy-3" fill="#F2CF79" cx="168" cy="115.2" r="14.4"></circle>
+                    </g>
+                    <rect id="Rectangle" fill="#F2CF79" x="52.8" y="187.2" width="19.2" height="57.6" rx="9.6"></rect>
+                    <rect id="Rectangle-Copy-22" fill="#F2CF79" x="110.4" y="187.2" width="19.2" height="48" rx="9.6"></rect>
+                    <rect id="Rectangle-Copy-23" fill="#F2CF79" x="168" y="187.2" width="19.2" height="57.6" rx="9.6"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

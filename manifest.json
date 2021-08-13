@@ -1,0 +1,35 @@
+{
+    "short_name": "Shout Desktop",
+    "name": "Texting and chat tools for your small business.",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "logo_ship.svg",
+        "type": "image/svg",
+        "sizes": "512x512 192x192"
+      },
+      {
+        "src": "shout_card_decoration.svg",
+        "type": "image/svg",
+        "sizes": "512x512 192x192 108x108 64x64 32x32 24x24 16x16"
+      },
+      {
+        "src": "shout_card_decoration_yellow.svg",
+        "type": "image/svg",
+        "sizes": "512x512 192x192 108x108 64x64 32x32 24x24 16x16"
+      },
+      {
+        "src": "shout_card_decoration_yellow_faded.svg",
+        "type": "image/svg",
+        "sizes": "512x512 192x192 108x108 64x64 32x32 24x24 16x16"
+      }
+    ],
+    "start_url": "/inbox",
+    "display": "standalone",
+    "theme_color": "#f23d5e",
+    "background_color": "#ffffff"
+  }
