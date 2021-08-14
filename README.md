@@ -1,26 +1,21 @@
-# electron-quick-start
+## Shout Electron
+This is the Shout electron repo.  It's a minimalist electron app that allows Shout users to access their shout accounts via a native desktop app.
 
-**Clone and run for a quick way to see Electron in action.**
+### To Use
+You can download the Shout Desktop app from the releases section of this repository (to the right if you are reading this on your computer).  The app is currently fully available for MAC computers. You are welcome to use the windows version as well, but it's not yet code signed, so you will need to dismiss the warnings on your windows machine and allow the app to be opened.  We anticipate a code signed windows version of the app soon.
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+### To Contribute
+If you're a developer an looking to contribute, I highly recomment checking out this article:
+https://slack.engineering/interops-labyrinth-sharing-code-between-web-electron-apps/
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+Here's the step by step instructions to setup a Shout Electron development environment: 
+1. Set up the web development environment: To get that running chat with Cameron.  The repo is called "shout_rails".  Your development environment should run at http://localhost:3000
 
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+2. To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/Verdad/shout_electron
 # Go into the repository
 cd electron-quick-start
 # Install dependencies
@@ -28,8 +23,6 @@ npm install
 # Run the app
 npm start
 ```
-
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
 ## Resources for Learning Electron
 
