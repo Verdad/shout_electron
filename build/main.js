@@ -1,7 +1,7 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, ipcMain, Notification } = require('electron');
 const { autoUpdater } = require("electron-updater");
 const log = require("electron-log");
-
+const path = require('path');
 //-------------------------------------------------------------------
 // Logging
 //
@@ -24,10 +24,13 @@ function createWindow() {
     width: 1400,
     height: 800,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: false,
+      contextIsolation: true,
+      enableRemoteModule: false,
+      preload: path.join(__dirname, 'preload.js')
     },
   })
-
+  // Use this code if we build a front end application
   //mainWindow.loadURL(
   //  process.env.ELECTRON_START_URL ||
   //    url.format({
@@ -37,10 +40,22 @@ function createWindow() {
   //      slashes: true,
   //    })
   //)
-  mainWindow.loadURL("https://www.shout.app/desktop_start");
+  mainWindow.loadURL( isDev ? "http://localhost:3000/shout_electron" : "https://www.shout.app/start_shout_desktop");
+  if (isDev) {
+    mainWindow.openDevTools();
+  }
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+}
+
+async function showNotification (params) {
+  //log.info("showNotification params: ", params);
+  let {title, body, icon, silent, badge, image, error} =  params;
+  if (error) {
+    throw new Error("Electron showNotification received the error parameter.")
+  }
+  return await new Notification(params).show()
 }
 
 app.on('ready', function() {
@@ -63,12 +78,21 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
   if (mainWindow === null) {
     createWindow();
-    //mainWindow.openDevTools();
   }
+  log.info("on activate.");
 })
 
+ipcMain.on("electronNotify", (event, data) => {
+  showNotification(data).then( () => {
+    mainWindow.webContents.send("fromElectron", {status: true, type: "electronNotify", data});
+  })
+  .catch( error => {
+    //log.info("Error: ", error);
+    mainWindow.webContents.send("fromElectron", {status: false, type: "electronNotify", data, error});
+  });
+});
+
 // Create menu template
-// This doesn't work at the moment ... need to dive into this.
 const mainMenuTemplate = [
   {
     label: "Shout Desktop",
