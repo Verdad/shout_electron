@@ -8,7 +8,7 @@
     "electron-pack": "electron-builder -m",
     "pack": "electron-builder --dir",
     "postinstall": "install-app-deps",
-    "release": "electron-builder -m --publish always"
+    "release": "electron-builder -mw --publish always"
   },
   "repository": "https://github.com/Verdad/shout_electron",
   "keywords": [
@@ -30,7 +30,8 @@
     "dotenv": "^10.0.0",
     "electron-is-dev": "^2.0.0",
     "electron-log": "^4.4.1",
-    "electron-updater": "^4.3.9"
+    "electron-updater": "^4.3.9",
+    "node": "^16.6.1"
   },
   "build": {
     "appId": "com.shout.desktop",
